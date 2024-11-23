@@ -40,6 +40,9 @@ Files:
         -> Show percentage and letter grade
 
 
+        -> (on appear, pop out letter grade)
+
+        
 
      **- How GUI interacts with backend
         ->

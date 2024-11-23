@@ -50,9 +50,9 @@ body {
         border: 2.5px solid var(--fifaRareSilver);
     }
 
-    .widgetContent{
+    .first_row{
         display: flex;
-        gap: 7.5rem;
+        gap: 8rem;
     }
 
 
@@ -102,7 +102,7 @@ body {
     /* Authenticity Grade */
         #letterGrade {
             margin: 0;
-            font-size: 55px;
+            font-size: 60px;
             line-height: 1.65;
             text-align: center;
             font-family: "Courgette", cursive;
@@ -111,4 +111,12 @@ body {
             -webkit-text-stroke: 1.5px black; /* Black outline */
             text-stroke: 0.2px black;
             z-index: 1; /* Above blob */
+        }
+
+        #percentageGrade{
+            font-size: 60px;
+            line-height: 1.65;
+            text-align: center;
+            font-family: "Courgette", cursive;
+
         }
