@@ -1,1 +1,2 @@
 package/model/DistilBERT/BERT_saved/model.safetensors filter=lfs diff=lfs merge=lfs -text
+package/model/DistilBERT/BERT_ONNX/model.onnx filter=lfs diff=lfs merge=lfs -text
