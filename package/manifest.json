@@ -3,7 +3,9 @@
     "name": "RealReviews",
     "version": "1.0",
     "description": "Grades products based on the trustworthiness of the reviews.",
-
+    "action": {
+    "default_popup": "index.html"
+    },
     "content_scripts": [
     {
       "js": ["scripts/content.js"],
@@ -12,8 +14,10 @@
         "https://www.amazon.com/*"
       ]
     }
-  ]
-
-  }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
   
   
