@@ -18,27 +18,25 @@
 
 </head>
 <body>
-    <div class="container"> 
-        <div class="widgetContent card">
-            <!-- Product Name-->
-            <h1 id="productName">Bose NC700</h1>
-
-            <!-- Authenticity Grade (i.e. A, B, C, F) -->
-            <div class="gradeWrapper"> 
-                <h2>A</h2>
+    <div class="container card"> 
+        <!-- Blob Background -->
+        <div class="blob-outer-container">
+            <div class="blob-inner-container">
+                <div class="blob"></div>
             </div>
-
-
-
-
         </div>
-
-    </div>
-
-
-    <div class="blob-outer-container">
-        <div class="blob-inner-container">
-            <div class="blob"></div>
+    
+        <!-- Card Content -->
+        <div class="widgetContent ">
+            <!-- Product Name -->
+            <h1 id="productName">Bose NC700</h1>
+    
+            <!-- Authenticity Grade -->
+            <div class="gradeWrapper"> 
+                <h2 id="letterGrade">
+                    A
+                </h2>
+            </div>
         </div>
     </div>
 
@@ -51,14 +49,15 @@
             VanillaTilt.init(document.querySelectorAll(".card"),{
             max: 25,
             speed: 400,
-            glare: true,
-            "max-glare": 0.1, 
+            glare: false,
             gyroscope: true,
         });
     </script>
 
 
 </body>
+
+
 
 <!-- Link CSS -->
 <link rel="stylesheet" href="/frontend/style/widget.css">
