@@ -15,6 +15,9 @@ let reviewsContainer = document.querySelector("#cm-cr-dp-review-list");
 if(!reviewsContainer){
     reviewsContainer = document.querySelector("#cm_cr-review_list");
 }
+if(!reviewsContainer){
+    reviewsContainer = document.querySelector("#cm-cr-global-review_list");
+}
 if(reviewsContainer){
     //Extract the reviews into an array
     const reviews = reviewsContainer.querySelectorAll('[data-hook="review"]');
