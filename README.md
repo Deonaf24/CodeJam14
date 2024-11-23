@@ -46,7 +46,7 @@ Files:
             -> Background gradient 
             -> Pie Chart
             -> Change percentage
-
+            -> Find font percentage grade
         
 
      **- How GUI interacts with backend
