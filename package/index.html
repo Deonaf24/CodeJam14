@@ -42,20 +42,26 @@
                         <hr>
                     </div>
         
-                <!-- Letter Grade -->
-                <div class="letterGradeWrapper">
-                    <h2 id="letterGrade">A</h2>
+                <!-- TEMPLATE (DOES NOTHING) Letter Grade -->
+                <div class="templateGradeWrapper">
+                    <h2 class="templateGrade">A</h2>
                 </div>
+                
+                <!-- REAL GRADE -->
+                <span class="threeDtext" id="letterGrade">A</span>
 
                 <hr>
 
                 <!-- Bottom Row -->
                 <div class="bottomRow">
 
-                    <h3 class="redFlags" id="starRating">
-                        Red Flags
-
-
+                    <h3 class="star-container" id="starRating">
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <!-- Add stars dynamically -->
                     </h3>
 
                     <!-- Percentage Grade -->
@@ -63,11 +69,13 @@
                 </div>
             
 
-
+                
+                
         </div>
     </div>
 
 
+    
 
     
 
@@ -76,7 +84,7 @@
 
 
    <!-- Vanilla Tilts Cards -->
-   <script src="scripts/tilt.js"></script>
+   <script src="../frontend/js/tilt.js"></script>
    
    <script src="scripts/tilt-init.js"></script>
 

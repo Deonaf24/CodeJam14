@@ -79,27 +79,23 @@
         }
 
     /* Authenticity Grade */
-        .letterGradeWrapper{
+        .templateGradeWrapper{
             font-size: 90px;
         }
 
-        #letterGrade {
+        .templateGrade {
             margin-top: 20%;
             margin-bottom: 20%;
 
             text-align: center;
             font-family: "Courgette", cursive;
             font-weight: 300;
-            color: var(--fifaRareGold);
-            -webkit-text-stroke: 1.5px black; /* Black outline */
-            text-stroke: 0.2px black;
+            color: transparent;
+            
             z-index: 1; /* Above blob */
 
-            transition: all 1s ease;
         }
-        #letterGrade:hover{
-            transform: scale(2);
-        }
+        
 
 
         /* Percentage Grade */
@@ -121,5 +117,81 @@
                 transform: rotate(180deg);
             }
 
+         /* Star Rating */ 
+        .redFlags {
+            color: var(--fifaRareGold);
+            margin-left: 15px;
+            margin-top: 25px;
+            width: fit-content;
+            text-decoration: underline;
+            
+            transition: all 0.3s ease-in;
+            cursor: pointer;
+        }
 
+        .redFlags:hover{
+            transform: scale(1.3);
+        }
+                
+
+
+
+
+        .star-container {
+            display: flex;
+            gap: 5px; /* Space between stars */
+            margin-left: 15px;
+            margin-top: 25px;
+          }
+          .star {
+            width: 30px;
+            height: 30px;
+            background-color: var(--fifaRareGold);
+            clip-path: polygon(
+              50% 0%,
+              61% 35%,
+              98% 35%,
+              68% 57%,
+              79% 91%,
+              50% 70%,
+              21% 91%,
+              32% 57%,
+              2% 35%,
+              39% 35%
+            );
+          }
+          .star.filled {
+            background-color: var(--fifaRareGold);
+          }
+
+
+
+
+
+    
         
+        .threeDtext {
+            position: absolute;
+            top: 50%; 
+            right: 50%;
+            transform: translate(50%,-50%);
+            text-transform: uppercase;
+            font-family: "Courgette", cursive;
+            font-size: 12em;
+            font-weight: 700;
+            color: var(--fifaRareGold);
+            text-shadow: 1px 1px 1px #caab50,
+                1px 2px 1px #caab50,
+                1px 3px 1px #caab50,
+                1px 4px 1px #caab50,
+                1px 5px 1px #caab50,
+                1px 6px 1px #caab50,
+                1px 7px 1px #caab50,
+                1px 8px 1px #caab50,
+                1px 9px 1px #caab50,
+                1px 10px 1px #caab50,
+            1px 18px 6px rgba(16,16,16,0.4),
+            1px 22px 10px rgba(16,16,16,0.2),
+            1px 25px 35px rgba(16,16,16,0.2),
+            1px 30px 60px rgba(16,16,16,0.4);
+        }
