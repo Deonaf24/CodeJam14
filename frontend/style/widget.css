@@ -1,0 +1,54 @@
+:root {
+    /* Global Variables */
+    --githubDark: rgba(13,17,23,255);
+
+}
+
+body{
+    background-color: var(--githubDark);
+}
+
+
+/* Widget Style */
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 10vw auto;    
+    }
+
+    .container .card {
+        position: relative;
+        width: 30vw;
+        height: 35vw;
+        
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 20px 20px 50px rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
+    }
+
+
+/* Content Style */
+    /* Product Name */
+    h1{
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: 32px;
+        text-decoration: underline;
+
+        color: black;
+        font-family: "Manrope", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    /* Letter Grade */ 
+    .gradeWrapper{
+        
+
+    }
