@@ -17,7 +17,7 @@ class Review{
 //Model Function
 async function loadModelAndPredict(parsedReviews) {
     // Path to the extracted model directory
-    const modelPath = "package/model/DistilBERT/BERT_saved";
+    const modelPath = "package/model/DistilBERT/BERT_ONNX/";
 
     console.log("Loading model and tokenizer...");
 
@@ -82,8 +82,26 @@ if(reviewsContainer){
             //Instantiate a new review object
             parsedReviews.push(Review(title, body, rating, date));
         });
+
         console.log(parsedReviews);
+
+        //rate the reviews
         loadModelAndPredict(parsedReviews);
+
+        //calculate the new rating
+        let ratings = 0;
+        //keep track of how many reviews are used in new rating
+        let count = 0;
+        parsedReviews.forEach((review) => {
+            if (review.status){
+                ratings += review.rating;
+                count++;
+            }
+        });
+        ratings = ratings/count;
+        //update the HTML
+        document.getElementById("AdjustedRating").innerHTML = ratings.toString();
+        document.getElementById("Percentage").innerHTML = count/parsedReviews * 100;
     }
 }
 else{
