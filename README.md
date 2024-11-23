@@ -47,6 +47,9 @@ Files:
             -> Pie Chart
             -> Change percentage
             -> Find font percentage grade
+            -> Logo
+            -> Spin card ( logo on back )
+            -> Clear background
         
 
      **- How GUI interacts with backend

@@ -3,10 +3,12 @@
         position: relative;
         justify-content: center;
         margin: 0 auto;
-        align-items: center;
         
-        width: 95%;
-        overflow: hidden;
+        width: 30vw; /* 95% for extension */
+        height: 40vw;
+        margin-top: 5rem; /* REMOVE */
+
+        overflow: clip;
         border-radius: 15px;
         box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2); 
         background-color: #212154; 
@@ -14,9 +16,14 @@
         border: 2.5px solid var(--fifaRareGold);
     }
 
-    .first_row{
-        display: flex;
-        gap: 8rem;
+
+    .widgetContent{
+        /* ADD BACK FOR EXTENSION height: 400px !important; */
+        /* ADD BACK FOR EXTENSION width: 275px !important; */
+    }
+
+    .topRow{
+        margin: 10px auto;
     }
 
 
@@ -52,22 +59,34 @@
     
 /* Content Styles */
     /* Product Name */
-        h1 {
-            text-align: left;
-            padding-left: 20px;
-            padding-top: 10px;
-            font-size: 32px;
-            text-decoration: underline;
+        .cardTitle {
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: center;
+
+            font-size: 40px;  /* 8vw for extension */
+            
             color: var(--fifaRareGold);
             z-index: 1; /* Above Blob */
 
         }
 
+        /* Horizontal Line */
+        hr {
+            border: none;
+            border-top: 1.5px solid var(--fifaRareGold); /* Customize thickness and color */
+            margin: 10px 0; /* Adjust spacing */
+        }
+
     /* Authenticity Grade */
+        .letterGradeWrapper{
+            font-size: 90px;
+        }
+
         #letterGrade {
-            margin: 0;
-            font-size: 60px;
-            line-height: 1.65;
+            margin-top: 20%;
+            margin-bottom: 20%;
+
             text-align: center;
             font-family: "Courgette", cursive;
             font-weight: 300;
@@ -77,13 +96,24 @@
             z-index: 1; /* Above blob */
         }
 
-        #percentageGrade{
-            margin-top: 30px;
-            font-size: 120px;
-            line-height: 1.65;
-            text-align: center;
-            font-family: "Manrope", cursive;
-            color: var(--fifaRareGold);
-            -webkit-text-stroke: 2px black; /* Black outline */
-            text-stroke: 0.2px black;
-        }
+        /* Percentage Grade */
+          /* Top Grade */
+            #percentageGrade{
+                position: absolute;
+                margin: -5px 0 0 15px;
+                font-size: 30px;
+                text-align: center;
+                font-family: "Manrope", cursive;
+                color: var(--fifaRareGold);
+                -webkit-text-stroke: 0.5px black; /* Black outline */
+                text-stroke: 0.2px black;
+            }
+          /* Bottom Grade */
+            .bottomRow #percentageGrade{
+                bottom: 15px;
+                right: 15px;
+                transform: rotate(180deg);
+            }
+
+
+        

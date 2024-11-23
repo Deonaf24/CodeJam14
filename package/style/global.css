@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: transparent;
+    background-color: var(--githubDark);
     font-family: "Manrope", serif;
     font-weight: 500;
     font-style: normal;
