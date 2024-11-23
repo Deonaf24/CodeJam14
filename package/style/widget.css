@@ -4,22 +4,22 @@
         justify-content: center;
         margin: 0 auto;
         
-        width: 30vw; /* 95% for extension */
-        height: 40vw;
-        margin-top: 5rem; /* REMOVE */
+        width: 97%; /* 95% for extension */
+        height: 60%;
 
-        overflow: clip;
         border-radius: 15px;
         box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2); 
-        background-color: #212154; 
+        background-color: var(--codeJamBlue); 
+        
+        overflow: hidden;
 
-        border: 2.5px solid var(--fifaRareGold);
+        border: 2.5px solid var(--fifaRareSilver);
     }
 
 
     .widgetContent{
-        /* ADD BACK FOR EXTENSION height: 400px !important; */
-        /* ADD BACK FOR EXTENSION width: 275px !important; */
+        height: 400px !important; 
+        width: 325px !important; 
     }
 
     .topRow{
@@ -51,9 +51,9 @@
         position: absolute;
         width: 40%;
         height: 40%;
-        background: radial-gradient(var(--pastelGreen), 
-                                    var(--pastelGreen) 45%, 
-                                    var(--pastelGreen) 100%);        
+        background: radial-gradient(var(--white), 
+                                    var(--white) 45%, 
+                                    var(--white) 100%);        
         animation: spinBlob 8s linear infinite;
     }
     
@@ -66,7 +66,7 @@
 
             font-size: 40px;  /* 8vw for extension */
             
-            color: var(--fifaRareGold);
+            color: var(--fifaRareSilver);
             z-index: 1; /* Above Blob */
 
         }
@@ -74,8 +74,9 @@
         /* Horizontal Line */
         hr {
             border: none;
-            border-top: 1.5px solid var(--fifaRareGold); /* Customize thickness and color */
+            border-top: 1.5px solid var(--fifaRareSilver); /* Customize thickness and color */
             margin: 10px 0; /* Adjust spacing */
+            width: 315px !important; 
         }
 
     /* Authenticity Grade */
@@ -85,7 +86,7 @@
 
         .templateGrade {
             margin-top: 20%;
-            margin-bottom: 20%;
+            margin-bottom: 10%;
 
             text-align: center;
             font-family: "Courgette", cursive;
@@ -106,10 +107,11 @@
                 font-size: 30px;
                 text-align: center;
                 font-family: "Manrope", cursive;
-                color: var(--fifaRareGold);
+                color: var(--fifaRareSilver);
                 -webkit-text-stroke: 0.5px black; /* Black outline */
                 text-stroke: 0.2px black;
             }
+
           /* Bottom Grade */
             .bottomRow #percentageGrade{
                 bottom: 15px;
@@ -118,25 +120,6 @@
             }
 
          /* Star Rating */ 
-        .redFlags {
-            color: var(--fifaRareGold);
-            margin-left: 15px;
-            margin-top: 25px;
-            width: fit-content;
-            text-decoration: underline;
-            
-            transition: all 0.3s ease-in;
-            cursor: pointer;
-        }
-
-        .redFlags:hover{
-            transform: scale(1.3);
-        }
-                
-
-
-
-
         .star-container {
             display: flex;
             gap: 5px; /* Space between stars */
@@ -146,7 +129,7 @@
           .star {
             width: 30px;
             height: 30px;
-            background-color: var(--fifaRareGold);
+            background-color: var(--fifaRareSilver);
             clip-path: polygon(
               50% 0%,
               61% 35%,
@@ -160,38 +143,66 @@
               39% 35%
             );
           }
-          .star.filled {
-            background-color: var(--fifaRareGold);
-          }
-
-
-
-
+          
 
     
+        /* 3D text */
+            .letterGrade {
+                position: absolute;
+                top: 50%; 
+                right: 50%;
+                transform: translate(50%,-50%);
+                text-transform: uppercase;
+                font-family: "Courgette", cursive;
+                font-size: 12em;
+                font-weight: 700;
+                color: var(--fifaRareSilver);
+                text-shadow: 1px 1px 1px var(--fifaSilver),
+                    1px 2px 1px var(--fifaSilver),
+                    1px 3px 1px var(--fifaSilver),
+                    1px 4px 1px var(--fifaSilver),
+                    1px 5px 1px var(--fifaSilver),
+                    1px 6px 1px var(--fifaSilver),
+                    1px 7px 1px var(--fifaSilver),
+                    1px 8px 1px var(--fifaSilver),
+                    1px 9px 1px var(--fifaSilver),
+                    1px 10px 1px var(--fifaSilver),
+                1px 18px 6px rgba(16,16,16,0.4),
+                1px 22px 10px rgba(16,16,16,0.2),
+                1px 25px 35px rgba(16,16,16,0.2),
+                1px 30px 60px rgba(16,16,16,0.4);
+            }
+
+            /* PopUp */
+                /* Letter Grade */
+                .popUpLetter {
+                    animation: popUpAnimation 2s ease forwards;
+                }
+                
+                @keyframes popUpAnimation {
+                    0%, 100% {
+                        transform: translate(50%,-50%) scale(1);
+                    }
+                    50% {
+                        transform: translate(50%, -70%) scale(2.5);
+                    }
+                }
+
+
+
+
+
+
+                .change-color-btn {
+                    margin-top: 20px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: var(--fifaSilver);
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
         
-        .threeDtext {
-            position: absolute;
-            top: 50%; 
-            right: 50%;
-            transform: translate(50%,-50%);
-            text-transform: uppercase;
-            font-family: "Courgette", cursive;
-            font-size: 12em;
-            font-weight: 700;
-            color: var(--fifaRareGold);
-            text-shadow: 1px 1px 1px #caab50,
-                1px 2px 1px #caab50,
-                1px 3px 1px #caab50,
-                1px 4px 1px #caab50,
-                1px 5px 1px #caab50,
-                1px 6px 1px #caab50,
-                1px 7px 1px #caab50,
-                1px 8px 1px #caab50,
-                1px 9px 1px #caab50,
-                1px 10px 1px #caab50,
-            1px 18px 6px rgba(16,16,16,0.4),
-            1px 22px 10px rgba(16,16,16,0.2),
-            1px 25px 35px rgba(16,16,16,0.2),
-            1px 30px 60px rgba(16,16,16,0.4);
-        }
+                .change-color-btn:hover {
+                    background-color: #ddd;
+                }

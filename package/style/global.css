@@ -3,7 +3,9 @@
     --githubDark: rgba(13, 17, 23, 255);
     --pastelGreen: rgba(171, 240, 209, 255);
     --pastelRed: rgba(255, 64, 63, 255);
+    
     --codeJamBlue: #2f2f60;
+    --black: black;
 
     --fifaRareGold: #f2e48e;
     --fifaGold: #caab50;
@@ -11,19 +13,21 @@
     --fifaRareSilver: #cddbdf;
     --fifaSilver: #a3a4a4;
 
+    --fifaRareBronze: #d49969;
     --fifaBronze: #9b7662;
+    
+
+    --white: white
 }
 
 body {
-    background-color: var(--githubDark);
+    background-color: var(--fifaRareSilver);
     font-family: "Manrope", serif;
     font-weight: 500;
     font-style: normal;
     margin: 0 auto;
     padding: 0;
-    overflow: hidden;
 }
-
 
 /* Blob Animation */
 @keyframes spinBlob {
