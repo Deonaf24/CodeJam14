@@ -15,11 +15,11 @@
 }
 
 body {
-    background-color: var(--githubDark);
+    background-color: transparent;
     font-family: "Manrope", serif;
     font-weight: 500;
     font-style: normal;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     overflow: hidden;
 }

@@ -2,10 +2,10 @@
     .container {
         position: relative;
         justify-content: center;
+        margin: 0 auto;
         align-items: center;
-        margin: 10vw auto;
-        width: 30vw;
-        height: 35vw;
+        
+        width: 95%;
         overflow: hidden;
         border-radius: 15px;
         box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2); 
