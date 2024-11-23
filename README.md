@@ -39,8 +39,13 @@ Files:
         -> Hazard comment section 
         -> Show percentage and letter grade
 
-
-        -> (on appear, pop out letter grade)
+        TODO:
+            -> (on appear, pop out letter grade)
+            -> (find % grade font)
+            -> Hazard section (Louis)
+            -> Background gradient 
+            -> Pie Chart
+            -> Change percentage
 
         
 
