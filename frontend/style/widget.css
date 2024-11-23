@@ -1,39 +1,3 @@
-:root {
-    /* Global Variables */
-    --githubDark: rgba(13, 17, 23, 255);
-    --pastelGreen: rgba(171, 240, 209, 255);
-    --pastelRed: rgba(255, 64, 63, 255);
-    --codeJamBlue: #2f2f60;
-
-    --fifaRareGold: #f2e48e;
-    --fifaGold: #caab50;
-
-    --fifaRareSilver: #cddbdf;
-    --fifaSilver: #a3a4a4;
-
-    --fifaBronze: #9b7662;
-}
-
-/* Blob Animation */
-@keyframes spinBlob {
-    0% {
-        transform: rotate(0deg) scale(1.5);
-    }
-    100% {
-        transform: rotate(360deg) scale(1.5);
-    }
-}
-
-body {
-    background-color: var(--githubDark);
-    font-family: "Manrope", serif;
-    font-weight: 500;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 /* Background */
     .container {
         position: relative;
