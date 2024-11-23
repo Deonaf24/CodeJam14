@@ -1,0 +1,16 @@
+{
+  "name": "codejam14",
+  "version": "1.0.0",
+  "description": "# IDEA: Rates how \"real\" reviews are. Also shows \"real\" review (after adjustments).",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

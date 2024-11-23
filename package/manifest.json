@@ -12,11 +12,13 @@
       "matches": [
         "https://www.amazon.ca/*",
         "https://www.amazon.com/*"
-      ]
+      ],
+      "type": "module"
     }
     ],
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "scripting"
     ]
 }
   
