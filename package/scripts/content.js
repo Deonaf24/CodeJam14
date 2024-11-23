@@ -9,8 +9,9 @@ class Review{
     }
 }
 
-let reviewsContainer = document.querySelector("#cm-cr-dp-review-list");
 
+//Try to scrape for different types of review lists
+let reviewsContainer = document.querySelector("#cm-cr-dp-review-list");
 
 if(!reviewsContainer){
     reviewsContainer = document.querySelector("#cm_cr-review_list");
@@ -32,7 +33,7 @@ if(reviewsContainer){
             const body = review.querySelector('[data-hook="review-body"]')?.innerText.trim() || "No Body";
             
             //Extract the review rating
-            const rating = review.querySelector('[data-hook="review-star-rating"] .a-icon-alt')?.innerText.trim() || "No Rating";
+            const rating = review.querySelector('[data-hook="review-star-rating"] .a-icon-alt')?.innerText.trim()[0] || "No Rating";
             
             //Extract the review date
             const date = review.querySelector('[data-hook="review-date"]')?.innerText.trim() || "No Date";
