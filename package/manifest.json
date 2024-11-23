@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "RealReviews",
+    "version": "1.0",
+    "description": "Grades products based on the trustworthiness of the reviews.",
+
+    "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.amazon.ca/*",
+        "https://www.amazon.com/*"
+      ]
+    }
+  ]
+
+  }
+  
+  
