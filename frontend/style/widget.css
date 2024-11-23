@@ -1,11 +1,15 @@
 :root {
     /* Global Variables */
     --githubDark: rgba(13,17,23,255);
-
+    --pastelGreen: rgba(171,240,209,255);
+    --pastelRed: rgba(255,64,63,255);
 }
 
 body{
     background-color: var(--githubDark);
+    font-family: "Manrope", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 
@@ -22,13 +26,53 @@ body{
         width: 30vw;
         height: 35vw;
         
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.8);
         box-shadow: 20px 20px 50px rgba(255, 255, 255, 0.05);
         border-radius: 15px;
 
         border-top: 1px solid rgba(255, 255, 255, 0.3);
         border-left: 1px solid rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(5px);
+    }
+
+    /* Blob Background */ 
+    .blob-outer-container{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        inset: 0;
+        margin: auto;
+        filter: blur(100px);
+    }
+
+    .blob-inner-container{
+        border-radius: 99999px;
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 100vw;
+        height: 100vh;
+        min-width: 1000px;
+        overflow: hidden;
+        background-color: #fff;
+        transform: scale(0.6);
+    }
+
+    .blob{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        inset: 0;
+        margin: auto;
+        background: conic-gradient(from 0deg, #EBEAFF, #9694FF, #3D3BF3, #FF2929);
+        animation: spinBlob 8s linear infinite;
+    }
+
+    @keyframes spinBlob{
+        0%{ transform: rotate(0deg) scale(2); }
+
+        100%{ transform: rotate(1turn) scale(2); }
     }
 
 
@@ -42,13 +86,15 @@ body{
         text-decoration: underline;
 
         color: black;
-        font-family: "Manrope", serif;
-        font-weight: 500;
-        font-style: normal;
     }
 
     /* Letter Grade */ 
-    .gradeWrapper{
-        
+    h2{
+        margin: 0;
+        font-size: 200px;
+        text-align: center;
+        font-family: "Courgette", cursive;
+        font-weight: 300;
+        color: var(--pastelRed);
 
     }
