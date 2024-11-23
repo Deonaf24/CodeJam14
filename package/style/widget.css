@@ -94,7 +94,13 @@
             -webkit-text-stroke: 1.5px black; /* Black outline */
             text-stroke: 0.2px black;
             z-index: 1; /* Above blob */
+
+            transition: all 1s ease;
         }
+        #letterGrade:hover{
+            transform: scale(2);
+        }
+
 
         /* Percentage Grade */
           /* Top Grade */
