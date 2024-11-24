@@ -19,69 +19,87 @@
 
 </head>
 <body>
-    <!-- Front Card  -->
-    <div class="container card"> 
-        <div class="card-front"> 
-            <!-- Blob Background -->
-            <div class="blob-outer-container">
-                <div class="blob-inner-container">
-                    <div class="blob"></div>
-                </div>
-            </div>
-        
-            <div class="widgetContent">
 
-                    <!-- Top Row -->
-                        <div class="topRow">
+
+    <div class="flip-card-3D-wrapper">
+        <div id="flip-card">
+            <div class="flip-card-front">
+                
+
+    <!-- Front Card  -->
+    <div class="container card">
+                <!-- Blob Background -->
+                <div class="blob-outer-container">
+                    <div class="blob-inner-container">
+                        <div class="blob"></div>
+                    </div>
+                </div>
+            
+                <div class="widgetContent">
+                        <!-- Top Row -->
+                            <div class="topRow">
+                                <!-- Percentage Grade -->
+                                <span id="percentageGrade">95%</span>
+
+                                <!-- Product Name -->
+                                <h1 class="cardTitle">Rating</h1>
+
+
+                                
+                                <hr>
+                            </div>
+                
+                        <!-- TEMPLATE (DOES NOTHING) Letter Grade -->
+                        <div class="templateGradeWrapper">
+                            <h2 class="templateGrade">A</h2>
+                        </div>
+                        
+                        <!-- REAL GRADE -->
+                        <span class="letterGrade popUpLetter threeDtext" id="letterGrade">A</span>
+
+                        <hr>
+
+                        <!-- Bottom Row -->
+                        <div class="bottomRow">
+
+                            <h3 class="star-container" id="starRating">
+                                <!-- Add stars dynamically -->
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </h3>
+
                             <!-- Percentage Grade -->
                             <span id="percentageGrade">95%</span>
-
-                            <!-- Product Name -->
-                            <h1 class="cardTitle">Rating</h1>
-
-
-                            
-                            <hr>
-                        </div>
-            
-                    <!-- TEMPLATE (DOES NOTHING) Letter Grade -->
-                    <div class="templateGradeWrapper">
-                        <h2 class="templateGrade">A</h2>
+                        </div>            
+                        
                     </div>
-                    
-                    <!-- REAL GRADE -->
-                    <span class="letterGrade popUpLetter threeDtext" id="letterGrade">A</span>
+                        <button id="flip-card-btn-turn-to-back">flip</button>
+                    </div>
 
-                    <hr>
 
-                    <!-- Bottom Row -->
-                    <div class="bottomRow">
 
-                        <h3 class="star-container" id="starRating">
-                            <!-- Add stars dynamically -->
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                        </h3>
+                </div>
 
-                        <!-- Percentage Grade -->
-                        <span id="percentageGrade">95%</span>
-                    </div>                
+            
+        
+                
+                
+
+                <div class="flip-card-back">
+
+
+
+
+            
+                    <button id="flip-card-btn-turn-to-front">flip</button>
+                </div>
             </div>
+        </div>    
         </div>
-
-
         
-
-        <div class="card-back">
-        
-
-        </div>
-
-
-    </div>
 
 
 
@@ -99,11 +117,11 @@
     <script src="/package/static/js/buttonPreview.js"></script>
 
 
-
 <!-- Link CSS -->
 <link rel="stylesheet" href="/package/static/style/widget.css">
 <link rel="stylesheet" href="/package/static/style/global.css">
 
+<script src="/package/static/js/flipCard.js"></script>
 
 <!-- Link JS -->
 <script type="module" src="/package/src/content.js"></script>
