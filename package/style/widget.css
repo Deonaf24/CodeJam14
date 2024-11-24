@@ -1,0 +1,208 @@
+/* Background */
+    .container {
+        position: relative;
+        justify-content: center;
+        margin: 0 auto;
+        
+        width: 97%; /* 95% for extension */
+        height: 60%;
+
+        border-radius: 15px;
+        box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2); 
+        background-color: var(--codeJamBlue); 
+        
+        overflow: hidden;
+
+        border: 2.5px solid var(--fifaRareSilver);
+    }
+
+
+    .widgetContent{
+        height: 400px !important; 
+        width: 325px !important; 
+    }
+
+    .topRow{
+        margin: 10px auto;
+    }
+
+
+/* Blob Background */
+    .blob-outer-container {
+        position: absolute;
+        top: -20%;
+        left: -15%;
+        width: 200%;
+        height: 200%;
+        z-index: -1; /* Stay behind */
+        filter: blur(100px);
+    }
+
+    .blob-inner-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        transform: scale(0.7);
+    }
+
+    .blob {
+        position: absolute;
+        width: 40%;
+        height: 40%;
+        background: radial-gradient(var(--white), 
+                                    var(--white) 45%, 
+                                    var(--white) 100%);        
+        animation: spinBlob 8s linear infinite;
+    }
+    
+/* Content Styles */
+    /* Product Name */
+        .cardTitle {
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: center;
+
+            font-size: 40px;  /* 8vw for extension */
+            
+            color: var(--fifaRareSilver);
+            z-index: 1; /* Above Blob */
+
+        }
+
+        /* Horizontal Line */
+        hr {
+            border: none;
+            border-top: 1.5px solid var(--fifaRareSilver); /* Customize thickness and color */
+            margin: 10px 0; /* Adjust spacing */
+            width: 315px !important; 
+        }
+
+    /* Authenticity Grade */
+        .templateGradeWrapper{
+            font-size: 90px;
+        }
+
+        .templateGrade {
+            margin-top: 20%;
+            margin-bottom: 10%;
+
+            text-align: center;
+            font-family: "Courgette", cursive;
+            font-weight: 300;
+            color: transparent;
+            
+            z-index: 1; /* Above blob */
+
+        }
+        
+
+
+        /* Percentage Grade */
+          /* Top Grade */
+            #percentageGrade{
+                position: absolute;
+                margin: -5px 0 0 15px;
+                font-size: 30px;
+                text-align: center;
+                font-family: "Manrope", cursive;
+                color: var(--fifaRareSilver);
+                -webkit-text-stroke: 0.5px black; /* Black outline */
+                text-stroke: 0.2px black;
+            }
+
+          /* Bottom Grade */
+            .bottomRow #percentageGrade{
+                bottom: 15px;
+                right: 15px;
+                transform: rotate(180deg);
+            }
+
+         /* Star Rating */ 
+        .star-container {
+            display: flex;
+            gap: 5px; /* Space between stars */
+            margin-left: 15px;
+            margin-top: 25px;
+          }
+          .star {
+            width: 30px;
+            height: 30px;
+            background-color: var(--fifaRareSilver);
+            clip-path: polygon(
+              50% 0%,
+              61% 35%,
+              98% 35%,
+              68% 57%,
+              79% 91%,
+              50% 70%,
+              21% 91%,
+              32% 57%,
+              2% 35%,
+              39% 35%
+            );
+          }
+          
+
+    
+        /* 3D text */
+            .letterGrade {
+                position: absolute;
+                top: 50%; 
+                right: 50%;
+                transform: translate(50%,-50%);
+                text-transform: uppercase;
+                font-family: "Courgette", cursive;
+                font-size: 12em;
+                font-weight: 700;
+                color: var(--fifaRareSilver);
+                text-shadow: 1px 1px 1px var(--fifaSilver),
+                    1px 2px 1px var(--fifaSilver),
+                    1px 3px 1px var(--fifaSilver),
+                    1px 4px 1px var(--fifaSilver),
+                    1px 5px 1px var(--fifaSilver),
+                    1px 6px 1px var(--fifaSilver),
+                    1px 7px 1px var(--fifaSilver),
+                    1px 8px 1px var(--fifaSilver),
+                    1px 9px 1px var(--fifaSilver),
+                    1px 10px 1px var(--fifaSilver),
+                1px 18px 6px rgba(16,16,16,0.4),
+                1px 22px 10px rgba(16,16,16,0.2),
+                1px 25px 35px rgba(16,16,16,0.2),
+                1px 30px 60px rgba(16,16,16,0.4);
+            }
+
+            /* PopUp */
+                /* Letter Grade */
+                .popUpLetter {
+                    animation: popUpAnimation 2s ease forwards;
+                }
+                
+                @keyframes popUpAnimation {
+                    0%, 100% {
+                        transform: translate(50%,-50%) scale(1);
+                    }
+                    50% {
+                        transform: translate(50%, -70%) scale(2.5);
+                    }
+                }
+
+
+
+
+
+
+                .change-color-btn {
+                    margin-top: 20px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: var(--fifaSilver);
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+        
+                .change-color-btn:hover {
+                    background-color: #ddd;
+                }
