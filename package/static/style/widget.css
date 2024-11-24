@@ -270,15 +270,14 @@ html * {
     right: 8px;
     width: 40px;
     height: 40px;
-    background: white;
+    background: transparent;
     cursor: pointer;
     visibility: hidden;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: .7em;
     padding: 0;
-    color: grey;
-    border: 1px solid grey;
+    border: none;
   }
   #flip-card .flip-card-front, #flip-card .flip-card-back{
     width: 100%;
@@ -330,7 +329,7 @@ html * {
     width: 200px;
     height: 200px;
     border-radius: 50%; 
-    background-color:var(--fifaRareGold); 
+    background-color: var(--fifaRareGold); 
     box-shadow: 10px 10px 100px black;
     overflow: hidden; 
   }
@@ -341,7 +340,7 @@ html * {
     width: 100%;
     height: 100%;
     border-radius: 50%; 
-    background-color: #882c2c; 
+    background-color: var(--fifaBronze); 
     transform: rotate(342deg); 
     clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
   }
@@ -369,4 +368,24 @@ html * {
         line-height: 1.5;
   
     }
+
+    .fa-comment,
+    .fa-arrow-left {
+      color: var(--fifaRareGold);
+      font-size: 30px;
+      margin-top: 15px; 
+      margin-right: 10px; 
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+      opacity: 0.8; 
+    }
     
+    .fa-comment:hover,
+    .fa-arrow-left:hover {
+      transform: scale(1.2); 
+      opacity: 1;
+    }
+
+
+    .backButtonWrapper{
+      left: 15px;
+    }

@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Manrope:wght@200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -76,7 +78,11 @@
                         </div>            
                         
                     </div>
-                        <button id="flip-card-btn-turn-to-back">flip</button>
+                        <button id="flip-card-btn-turn-to-back">
+                            <div class="commentIcon">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                        </button>
                     </div>
 
 
@@ -93,6 +99,7 @@
 
 
                     <div class="container card"> 
+                        
                         <div class="card-back">
                 
                             <!-- Blob Background -->
@@ -106,11 +113,6 @@
                 
                                     <!-- Top Row -->
                                         <div class="topRow">
-                                            <!-- Conmment icon -->
-                                            <div class="commentIcon">
-                                                <i class="fa-solid fa-comment fa-beat fa-xl"></i>
-                                            </div>
-                
                                             <!-- Product Name -->
                                             <h1 class="cardTitle"><b>Overview</b></h1>
                                             <hr>
@@ -133,12 +135,22 @@
                                             <li>More comments</li>
                                         </ul>
                                     </div>
+
+
+
+                                </div>
+                                    <button class="backButtonWrapper" id="flip-card-btn-turn-to-front">
+
+                                        <div class="commentIcon">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                        </div>
+                                    </button>
+                                </div>
+
+
                                 </div>  
                             </div>
                     
-                            </div>
-                                <button id="flip-card-btn-turn-to-front">flip</button>
-                            </div>
                         </div>
             </div>
         </div>    
@@ -148,7 +160,7 @@
 
 
     <!-- Change Color Button -->
-    <button class="change-color-btn" onclick="changeColors()">Change Colors</button> 
+    <!-- <button class="change-color-btn" onclick="changeColors()">Change Colors</button> -->
     
 </body>
 
