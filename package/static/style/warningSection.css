@@ -105,7 +105,7 @@
     height: 200px;
     border-radius: 50%; 
     background-color:var(--fifaRareGold); 
-  
+    box-shadow: 10px 10px 100px black;
     overflow: hidden; 
   }
   
@@ -131,16 +131,15 @@
   }
   
   .comments {
-        margin-top: 0%;
-        margin-bottom: 30%;
+        margin: 0 auto;
         font-size: small;
         text-align: left;
         font-family: "Manrope";
-        font-weight: 300;
+        font-weight: 500;
         color: var(--fifaRareGold);
-        
+        font-size: 18px;
         z-index: 1; /* Above blob */
-
+        width: 80%;
         line-height: 1.5;
   
     }
