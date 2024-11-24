@@ -8,7 +8,7 @@
     },
     "content_scripts": [
     {
-      "js": ["scripts/content.js"],
+      "js": ["./content.bundle.js"],
       "matches": [
         "https://www.amazon.ca/*",
         "https://www.amazon.com/*"
