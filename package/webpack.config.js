@@ -7,7 +7,8 @@ module.exports = {
         content: "./src/content.js",
         tiltinit: "./src/tilt-init.js",
         tilt: "./src/tilt.js",
-        buttonpreview: "./src/buttonpreview.js"
+        buttonpreview: "./src/buttonpreview.js",
+        background: "./src/background.js"
     },
     output: {
         filename: '[name].bundle.js',
