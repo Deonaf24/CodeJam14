@@ -11,7 +11,7 @@
     overflow: clip;
     border-radius: 15px;
     box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2); 
-    background-color: #212154; 
+    background-color: var(--codeJamBlue); 
   
     border: 2.5px solid var(--fifaRareGold);
   }
@@ -62,7 +62,7 @@
     .cardTitle {
         margin: 0 auto;
         text-align: center;
-        margin-top: -10%;
+        margin-top: -5%;
         font-size: 30px;  /* 8vw for extension */
         
         color: var(--fifaRareGold);
@@ -105,6 +105,7 @@
     height: 200px;
     border-radius: 50%; 
     background-color:var(--fifaRareGold); 
+    box-shadow: 5px 10px 100px black;
   
     overflow: hidden; 
   }
@@ -131,15 +132,19 @@
   }
   
   .comments {
+        margin: 0 auto;
         margin-top: 0%;
         margin-bottom: 30%;
         font-size: small;
         text-align: left;
         font-family: "Manrope";
-        font-weight: 300;
+        font-size: 18px;
+        font-weight: 500;
+        width: 80%;
         color: var(--fifaRareGold);
-        
         z-index: 1; /* Above blob */
+
+        line-height: 1.5;
   
     }
     
