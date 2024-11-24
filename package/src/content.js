@@ -1,6 +1,5 @@
 // Import the transformers.js library
 import { AutoTokenizer, AutoModelForSequenceClassification } from '@xenova/transformers';
-import { parse } from 'path';
 
 //Create a class for reviews
 class Review{
@@ -17,14 +16,14 @@ class Review{
 //Model Function
 async function loadModelAndPredict(parsedReviews) {
     // Path to the extracted model directory
-    const modelPath = "package/model/DistilBERT/BERT_ONNX/";
+    const modelPath = "../model/DistillBERT/BERT_ONNX";
 
     console.log("Loading model and tokenizer...");
 
     // Load the fine-tuned model and tokenizer
     const tokenizer = await AutoTokenizer.from_pretrained(modelPath);
+    console.log("tokenizer loaded");
     const model = await AutoModelForSequenceClassification.from_pretrained(modelPath);
-
     console.log("Model and tokenizer loaded successfully!");
 
     //loop through parsedReviews
@@ -80,7 +79,7 @@ if(reviewsContainer){
             //Extract the review date
             const date = review.querySelector('[data-hook="review-date"]')?.innerText.trim() || "No Date";
             //Instantiate a new review object
-            parsedReviews.push(Review(title, body, rating, date));
+            parsedReviews.push(new Review(title, body, rating, date));
         });
 
         console.log(parsedReviews);
@@ -100,8 +99,8 @@ if(reviewsContainer){
         });
         ratings = ratings/count;
         //update the HTML
-        document.getElementById("AdjustedRating").innerHTML = ratings.toString();
-        document.getElementById("Percentage").innerHTML = count/parsedReviews * 100;
+        // document.getElementById("AdjustedRating").innerHTML = ratings.toString();
+        // document.getElementById("Percentage").innerHTML = count/parsedReviews * 100;
     }
 }
 else{

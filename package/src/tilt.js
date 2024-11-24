@@ -515,8 +515,9 @@ var VanillaTilt = (function () {
   }
   
   if (typeof document !== "undefined") {
-    /* expose the class to window */
+    /* expose the class to windows */
     window.VanillaTilt = VanillaTilt;
+    console.log("useless");
   
     /**
      * Auto load

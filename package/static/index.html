@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
     <title>Real Reviews</title>
 
 
@@ -48,7 +49,7 @@
                 </div>
                 
                 <!-- REAL GRADE -->
-                <span class="threeDtext" id="letterGrade">A</span>
+                <span class="letterGrade popUpLetter" id="letterGrade">F</span>
 
                 <hr>
 
@@ -56,11 +57,6 @@
                 <div class="bottomRow">
 
                     <h3 class="star-container" id="starRating">
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
                         <!-- Add stars dynamically -->
                     </h3>
 
@@ -69,38 +65,36 @@
                 </div>
             
 
-                
+
                 
         </div>
     </div>
 
+                 <!-- Change Color Button -->
+    
+    <button class="change-color-btn" onclick="changeColors()">Change Colors</button> 
 
     
-
-    
-
-
-
-
-
    <!-- Vanilla Tilts Cards -->
-   <script src="scripts/tilt.js"></script>
+   <script src="./tilt.bundle.js"></script>
    
-   <script src="scripts/tilt-init.js"></script>
+   <script src="./tiltinit.bundle.js"></script>
 
+    <!-- JavaScript for Color Change -->
+    <script src="./buttonPreview.bundle.js"></script>
 
 </body>
 
 
 
 <!-- Link CSS -->
-<link rel="stylesheet" href="./widget.css">
-<link rel="stylesheet" href="./warningSection.css">
-<link rel="stylesheet" href="./global.css">
+<link rel="stylesheet" href="style/widget.css">
+<link rel="stylesheet" href="style/warningSection.css">
+<link rel="stylesheet" href="style/global.css">
 
 <!-- Link JS -->
-<script type="module" src="../src/content.js"></script>
-<script src="../src/index.js"></script>
+<script type="module" src="./content.bundle.js"></script>
+<!-- <script src="./src/index.js"></script> -->
 
 
 
