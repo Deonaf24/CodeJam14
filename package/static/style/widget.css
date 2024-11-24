@@ -126,7 +126,7 @@
             display: flex;
             gap: 5px; /* Space between stars */
             margin-left: 20px;
-            margin-top: 32px;
+            margin-top: 15px;
           }
           .star {
             width: 30px;
