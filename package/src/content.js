@@ -48,6 +48,11 @@ if(reviewsContainer){
 
         console.log(parsedReviews);     
 
+        (async () => {
+            // Sends a message to the service worker and receives a tip in response
+            const { tip } = await chrome.runtime.sendMessage({ greeting: 'tip' });
+        })();
+
         //calculate the new rating
         let ratings = 0;
         //keep track of how many reviews are used in new rating
