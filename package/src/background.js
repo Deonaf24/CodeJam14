@@ -1,6 +1,77 @@
 import { AutoTokenizer, AutoModelForSequenceClassification, env } from '@xenova/transformers';
 
 env.backends.onnx.wasm.numThreads = 1;
+env.allowLocalModels = true;
+
+
+
+
+class PipelineSingleton {
+    static task = 'text-classification';
+    static model = 'model/DistilBERT/BERT_ONNX'; // Path to your local model folder
+    static instance = null;
+
+    static async getInstance(progress_callback = null) {
+        if (this.instance === null) {
+            this.instance = await pipeline(this.task, this.model, {
+                localFilesOnly: true, // Ensure local model usage
+                progress_callback,
+            });
+        }
+
+        return this.instance;
+    }
+}
+
+// Create generic classify function, which will be reused for the different types of events.
+const classify = async (text) => {
+    // Get the pipeline instance. This will load and build the model when run for the first time.
+    let model = await PipelineSingleton.getInstance((data) => {
+        // You can track the progress of the pipeline creation here.
+        // e.g., you can send `data` back to the UI to indicate a progress bar
+        // console.log('progress', data)
+    });
+
+    // Actually run the model on the input text
+    let result = await model(text);
+    return result;
+};
+
+////////////////////// 2. Message Events /////////////////////
+// 
+// Listen for messages from the UI, process it, and send the result back.
+chrome.runtime.onMessage.addListener((parsedReviews, sender, sendResponse) => {
+    console.log('sender', sender)
+    
+
+    // Run model prediction asynchronously
+    (async function () {
+        // Perform classification
+        parssedReviews.foreach (async (review) => {
+           review.status =  await classify(review.body);
+        });
+        
+
+        // Send response back to UI
+        sendResponse(result);
+    })();
+
+    // return true to indicate we will send a response asynchronously
+    // see https://stackoverflow.com/a/46628145 for more information
+    return true;
+});
+//////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
 
 //Model Function
 async function loadModelAndPredict(parsedReviews) {
@@ -36,6 +107,4 @@ async function loadModelAndPredict(parsedReviews) {
         console.log(`Predicted Label: ${labels[predictedLabel]}`);
         review.status = predictedLabel;
     })
-
-    loadModelAndPredict(window.parsedReviews);
 }

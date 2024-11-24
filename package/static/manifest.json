@@ -20,6 +20,12 @@
       "type": "module"
     }
     ],
+    "web_accessible_resources": [
+        {
+            "resources": ["models/local-distilbert/*"],
+            "matches": ["<all_urls>"]
+        }
+    ],
     "permissions": [
         "activeTab",
         "scripting"
