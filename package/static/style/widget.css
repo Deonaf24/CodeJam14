@@ -195,3 +195,35 @@
             1px 25px 35px rgba(16,16,16,0.2),
             1px 30px 60px rgba(16,16,16,0.4);
         }
+
+
+
+            /* PopUp */
+                /* Letter Grade */
+                .popUpLetter {
+                    animation: popUpAnimation 2s ease forwards;
+                }
+                
+                @keyframes popUpAnimation {
+                    0%, 100% {
+                        transform: translate(50%,-50%) scale(1);
+                    }
+                    50% {
+                        transform: translate(50%, -70%) scale(2.5);
+                    }
+                }
+
+
+                .change-color-btn {
+                    margin-top: 20px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: var(--fifaSilver);
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+        
+                .change-color-btn:hover {
+                    background-color: #ddd;
+                }

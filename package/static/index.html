@@ -49,7 +49,7 @@
                 </div>
                 
                 <!-- REAL GRADE -->
-                <span class="letterGrade popUpLetter" id="letterGrade">F</span>
+                <span class="letterGrade popUpLetter threeDtext" id="letterGrade">A</span>
 
                 <hr>
 
@@ -58,43 +58,42 @@
 
                     <h3 class="star-container" id="starRating">
                         <!-- Add stars dynamically -->
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
                     </h3>
 
                     <!-- Percentage Grade -->
                     <span id="percentageGrade">95%</span>
-                </div>
-            
-
-
-                
+                </div>                
         </div>
     </div>
 
-                 <!-- Change Color Button -->
     
+    <!-- Change Color Button -->
     <button class="change-color-btn" onclick="changeColors()">Change Colors</button> 
-
     
    <!-- Vanilla Tilts Cards -->
-   <script src="./tilt.bundle.js"></script>
+   <script src="../static/js/tilt.js"></script>
    
-   <script src="./tiltinit.bundle.js"></script>
+   <script src="/package/static/js/tilt-init.js"></script>
 
     <!-- JavaScript for Color Change -->
-    <script src="./buttonPreview.bundle.js"></script>
+    <script src="/package/static/js/buttonPreview.js"></script>
 
 </body>
 
 
 
 <!-- Link CSS -->
-<link rel="stylesheet" href="style/widget.css">
-<link rel="stylesheet" href="style/warningSection.css">
-<link rel="stylesheet" href="style/global.css">
+<link rel="stylesheet" href="/package/static/style/widget.css">
+<link rel="stylesheet" href="/package/static/style/global.css">
 
 <!-- Link JS -->
-<script type="module" src="./content.bundle.js"></script>
-<script type="module" src="./background.bundle.js"></script>
+<script type="module" src="/package/src/content.js"></script>
+<script type="module" src="/package/src/background.js"></script>
 
 
 
